@@ -2,6 +2,7 @@ services:
   webui:
     image: ceocok/codex-console:latest
     container_name: codex-console
+    privileged: true
     ports:
       - "1455:1455"
     environment:
