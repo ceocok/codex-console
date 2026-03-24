@@ -130,15 +130,21 @@ docker-compose up -d
 
 ### 使用 docker run
 
+docker pull ceocok/codex-console:latest
+
 ```bash
+docker rm -f codex-console
 docker run -d \
   -p 1455:1455 \
   -e WEBUI_HOST=0.0.0.0 \
   -e WEBUI_PORT=1455 \
   -e WEBUI_ACCESS_PASSWORD=your_secure_password \
+  -e DEBUG=0 \
+  -e LOG_LEVEL=info \
   -v $(pwd)/data:/app/data \
+  -v $(pwd)/logs:/app/logs \
   --name codex-console \
-  ghcr.io/<yourname>/codex-console:latest
+  ceocok/codex-console:latest
 ```
 
 说明:
