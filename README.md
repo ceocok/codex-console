@@ -134,6 +134,7 @@ docker pull ceocok/codex-console:latest
 
 ```bash
 docker run -d \
+  --privileged \
   -p 1455:1455 \
   -e WEBUI_HOST=0.0.0.0 \
   -e WEBUI_PORT=1455 \
