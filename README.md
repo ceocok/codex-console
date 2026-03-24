@@ -133,7 +133,6 @@ docker-compose up -d
 docker pull ceocok/codex-console:latest
 
 ```bash
-docker rm -f codex-console
 docker run -d \
   -p 1455:1455 \
   -e WEBUI_HOST=0.0.0.0 \
